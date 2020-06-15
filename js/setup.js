@@ -56,7 +56,7 @@ var getMassiveDatabase = function () {
   var massiveDatabase = [];
   for (var i = 0; i < QUANTITY_OF_WIZARDS; i++) {
     var wizard = {
-      name: firstNames[getRandomIntegerValue(0, firstNames.length - 1)] +  ' ' + lastNames[getRandomIntegerValue(0, lastNames.length - 1)],
+      name: firstNames[getRandomIntegerValue(0, firstNames.length - 1)] + ' ' + lastNames[getRandomIntegerValue(0, lastNames.length - 1)],
       coatColor: coatColors[getRandomIntegerValue(0, coatColors.length - 1)],
       eyesColor: eyesColors[getRandomIntegerValue(0, eyesColors.length - 1)]
     };
