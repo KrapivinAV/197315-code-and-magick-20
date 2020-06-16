@@ -76,15 +76,15 @@ var createWizard = function (data) {
   return wizard;
 };
 
-var addWizard = function (newWizard) {
-  fragment.appendChild(newWizard);
+var addWizard = function (newWizard, sameFragment) {
+  sameFragment.appendChild(newWizard);
 };
 
 var database = getMassiveDatabase();
 
 for (var i = 0; i < database.length; i++) {
   var sameWizard = createWizard(database[i]);
-  addWizard(sameWizard);
+  addWizard(sameWizard, fragment);
 }
 
 setupSimilarList.appendChild(fragment);
