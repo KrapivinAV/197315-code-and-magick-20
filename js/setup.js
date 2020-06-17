@@ -143,11 +143,11 @@ setupClose.addEventListener('keydown', function (evt) {
   }
 });
 
-setupNameField.addEventListener('focus', function (evt) {
+setupNameField.addEventListener('focus', function () {
   document.removeEventListener('keydown', onPopupEscPress);
 });
 
-setupNameField.addEventListener('blur', function (evt) {
+setupNameField.addEventListener('blur', function () {
   document.addEventListener('keydown', onPopupEscPress);
 });
 
