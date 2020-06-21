@@ -152,7 +152,6 @@ setupNameField.addEventListener('blur', function () {
 });
 
 var getNewColor = function (evt) {
-  console.log(evt.target);
   if (evt.target.matches('.' + setupWizardCoat.getAttribute('class'))) {
     setupWizardCoat.style.fill = getRandomMassiveItem(COAT_COLORS);
     setupWizardCoatField.value = setupWizardCoat.style.fill;
@@ -167,24 +166,6 @@ var getNewColor = function (evt) {
     setupFireballField.setAttribute('value', randomColor);
   }
 };
-
-/*
-setupWizardCoat.addEventListener('click', function (evt) {
-  setupWizardCoat.style.fill = getRandomMassiveItem(COAT_COLORS);
-  setupWizardCoatField.value = setupWizardCoat.style.fill;
-});
-
-setupWizardEyes.addEventListener('click', function (evt) {
-  setupWizardEyes.style.fill = getRandomMassiveItem(EYES_COLORS);
-  setupWizardEyesField.value = setupWizardEyes.style.fill;
-});
-
-setupFireball.addEventListener('click', function (evt) {
-  var randomColor = getRandomMassiveItem(FIREBALL_COLORS);
-  setupFireball.setAttribute('style', 'background-color: ' + randomColor);
-  setupFireballField.setAttribute('value', randomColor);
-});
-*/
 
 for (var i = 0; i < database.length; i++) {
   var sameWizard = createWizard(database[i]);
