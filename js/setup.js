@@ -57,7 +57,7 @@ var setupWizardCoat = setup.querySelector('.setup-wizard-wrap .wizard-coat');
 var setupWizardCoatField = setup.querySelector('input[name = "coat-color"]');
 var setupWizardEyes = setup.querySelector('.setup-wizard-wrap .wizard-eyes');
 var setupWizardEyesField = setup.querySelector('input[name = "eyes-color"]');
-var setupFireball = setup.querySelector('.setup-fireball-wrap');
+var setupFireball = setup.querySelector('.setup-fireball');
 var setupFireballField = setup.querySelector('input[name = "fireball-color"]');
 var setupClose = setup.querySelector('.setup-close');
 var setupSimilar = document.querySelector('.setup-similar');
@@ -152,6 +152,7 @@ setupNameField.addEventListener('blur', function () {
 });
 
 var getNewColor = function (evt) {
+  console.log(evt.target);
   if (evt.target.matches('.' + setupWizardCoat.getAttribute('class'))) {
     setupWizardCoat.style.fill = getRandomMassiveItem(COAT_COLORS);
     setupWizardCoatField.value = setupWizardCoat.style.fill;
