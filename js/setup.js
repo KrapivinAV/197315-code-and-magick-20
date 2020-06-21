@@ -1,6 +1,8 @@
 'use strict';
 
 var QUANTITY_OF_WIZARDS = 4;
+var CANCEL_EVT_KEY = 'Escape';
+var CONFIRM_EVT_KEY = 'Enter';
 
 var FIRST_NAMES = [
   'Иван',
@@ -75,7 +77,7 @@ var getRandomMassiveItem = function (arr) {
 };
 
 var onPopupEscPress = function (evt) {
-  if (evt.key === 'Escape') {
+  if (evt.key === CANCEL_EVT_KEY) {
     evt.preventDefault();
     closePopup();
   }
@@ -128,7 +130,7 @@ setupOpen.addEventListener('click', function () {
 });
 
 setupOpen.addEventListener('keydown', function (evt) {
-  if (evt.key === 'Enter') {
+  if (evt.key === CONFIRM_EVT_KEY) {
     openPopup();
   }
 });
@@ -138,7 +140,7 @@ setupClose.addEventListener('click', function () {
 });
 
 setupClose.addEventListener('keydown', function (evt) {
-  if (evt.key === 'Enter') {
+  if (evt.key === CONFIRM_EVT_KEY) {
     closePopup();
   }
 });
